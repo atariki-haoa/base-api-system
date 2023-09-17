@@ -1,0 +1,45 @@
+{
+    "root": true,
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended",
+      "airbnb"
+    ],
+    "settings": {
+      "import/resolver": {
+        "alias": {
+          "map": [
+            ["@", "./src"]
+          ],
+          "extensions": [".js", ".ts"]
+        }
+      }
+    },
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "ecmaFeatures": {
+        "jsx": true
+      },
+      "ecmaVersion": 12,
+      "sourceType": "module"
+    },
+    "plugins": ["@typescript-eslint"],
+    "rules": {
+      "max-classes-per-file": "off",
+      "space-before-function-paren": "off",
+      "no-use-before-define": "off",
+      "@typescript-eslint/no-use-before-define": "off",
+      "semi": [2, "always"],
+      "import/extensions": [
+        "error",
+        "ignorePackages",
+        {
+          "js": "never",
+          "jsx": "never",
+          "ts": "never",
+          "tsx": "never"
+        }
+      ],
+      "import/no-unresolved": "off"
+    }
+  }
